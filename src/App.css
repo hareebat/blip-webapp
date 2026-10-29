@@ -1678,7 +1678,7 @@ img.ingredient-list-window {
   background: #FFFAF5;
   border: 1px solid #1C2165;
   font-family: 'Retro Gaming', sans-serif;
-  font-size: 12px;
+  font-size: 12px;   /* tune this */
   line-height: 1.4;
   color: #1C2165;
   white-space: nowrap;

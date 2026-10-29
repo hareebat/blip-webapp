@@ -1567,7 +1567,12 @@ function App() {
       {tooltip && (
         <div
           className="game-tooltip"
-          style={{ left: tooltip.x + 14, top: tooltip.y + 18 }}
+          style={{ 
+            left: tooltip.x + 14 * sceneScale, 
+            top: tooltip.y + 18 * sceneScale,
+            transform: 'scale(${sceneScale})',
+            transformOrigin: 'top left',
+          }}
         >
           {tooltip.text}
         </div>
