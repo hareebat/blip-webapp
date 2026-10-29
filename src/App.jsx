@@ -660,7 +660,7 @@ function App() {
   useEffect(() => {
     const updateScale = () => {
       const isTouch = window.matchMedia('(pointer: coarse)').matches
-      const designWidth = isTouch ? 2250 : 1440
+      const designWidth = 2250
 
       const scaleX = document.documentElement.clientWidth / designWidth
       const scaleY = document.documentElement.clientHeight / 1024
