@@ -653,16 +653,27 @@ function App() {
     return () => typing.pause()
   }, [isTypingWin])
 
+  // SCENE SCALE: fits the game to the screen.
+  // On phones/tablets (touch devices) the whole layout is fitted, including the
+  // parts that stick out of the 1440px frame (about 2250px wide in total).
+  // On desktop it stays exactly as before.
   useEffect(() => {
     const updateScale = () => {
-      const scaleX = window.innerWidth / 1440
+      const isTouch = window.matchMedia('(pointer: coarse)').matches
+      const designWidth = isTouch ? 2250 : 1440
+
+      const scaleX = window.innerWidth / designWidth
       const scaleY = window.innerHeight / 1024
       setSceneScale(Math.min(scaleX, scaleY))
     }
 
     updateScale()
     window.addEventListener('resize', updateScale)
-    return () => window.removeEventListener('resize', updateScale)
+    window.addEventListener('orientationchange', updateScale)
+    return () => {
+      window.removeEventListener('resize', updateScale)
+      window.removeEventListener('orientationchange', updateScale)
+    }
   }, [])
 
   useEffect(() => {
@@ -1567,10 +1578,10 @@ function App() {
       {tooltip && (
         <div
           className="game-tooltip"
-          style={{ 
-            left: tooltip.x + 14 * sceneScale, 
+          style={{
+            left: tooltip.x + 14 * sceneScale,
             top: tooltip.y + 18 * sceneScale,
-            transform: 'scale(${sceneScale})',
+            transform: `scale(${sceneScale})`,
             transformOrigin: 'top left',
           }}
         >
