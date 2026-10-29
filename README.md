@@ -5,7 +5,7 @@ Blip is a browser-based, retro-inspired puzzle game built with React by studio M
 The game combines custom pixel-art assets, animated screens, clue-solving, open-sourced sound effects, and a downloadable rescue ID
 
 ## Play it
-the live link: 
+the live link: https://blip-studiomizi.pages.dev/
 
 
 ## Overview
