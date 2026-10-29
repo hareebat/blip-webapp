@@ -662,8 +662,8 @@ function App() {
       const isTouch = window.matchMedia('(pointer: coarse)').matches
       const designWidth = isTouch ? 2250 : 1440
 
-      const scaleX = window.innerWidth / designWidth
-      const scaleY = window.innerHeight / 1024
+      const scaleX = document.documentElement.clientWidth / designWidth
+      const scaleY = document.documentElement.clientHeight / 1024
       setSceneScale(Math.min(scaleX, scaleY))
     }
 

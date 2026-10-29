@@ -39,6 +39,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background: #FFFFFF;
 }
 
 .intro-screen video {
@@ -53,7 +54,7 @@ body {
 
 .game-screen {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   position: relative;
   display: flex;
