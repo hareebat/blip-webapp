@@ -1,0 +1,1777 @@
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.app {
+  width: 100%;
+  height: 100vh;
+}
+
+/* =========================
+   RETRO GAMING FONT
+   ========================= */
+
+@font-face {
+  font-family: 'Retro Gaming';
+  src: url('./assets/Retro Gaming.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* =========================
+   INTRO SCREEN
+   ========================= */
+
+.intro-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.intro-screen video {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* =========================
+   GAME SCREEN
+   ========================= */
+
+.game-screen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   DESIGN FRAME
+   ========================= */
+
+.design-frame {
+  width: 1440px;
+  height: 1024px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: center center;
+  flex-shrink: 0;
+}
+
+/* =========================
+   BACKGROUND
+   ========================= */
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* =========================
+   DESKTOP 2 WINDOW
+   ========================= */
+
+.pixel-window {
+  position: absolute;
+  width: 1239px;
+  height: 1239px;
+  left: 167px;
+  top: 0;
+}
+
+/* =========================
+   DESKTOP 2 DEVICE
+   ========================= */
+
+.device {
+  position: absolute;
+  width: 792px;
+  height: 460px;
+  left: 316px;
+  top: 334.5px;
+  transform: scaleX(1.074);
+  transform-origin: center center;
+}
+
+/* =========================
+   ANYONE THERE
+   ========================= */
+
+.dev-message {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  left: 335px;
+  top: 250px;
+  cursor: pointer;
+}
+
+.dev-message {
+  cursor: pointer;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.dev-message:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+/* =========================================================
+   DESKTOP 3
+   ========================================================= */
+
+.mizi {
+  position: absolute;
+  width: 159px;
+  height: 159px;
+  left: 1650px;
+  top: 20px;
+}
+
+/* =========================
+   DESKTOP 3 WINDOW
+   ========================= */
+
+.desktop3-window {
+  width: 1239px;
+  height: 1239px;
+  left: 167px;
+  top: 0;
+}
+
+/* =========================
+   DIALOGUE TEXT
+   ========================= */
+
+.dialogue-text {
+  position: absolute;
+  width: 649px;
+  font-family: 'Retro Gaming';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 41px;
+  text-align: center;
+}
+
+/* =========================
+   MESSAGE 1
+   ========================= */
+
+.message-one {
+  width: 361px;
+  height: 56px;
+  left: 49%;
+  top: 525px;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   MESSAGE 2
+   ========================= */
+
+.message-two {
+  width: 649px;
+  height: 45px;
+  left: 49%;
+  top: 437px;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   MESSAGE 3
+   ========================= */
+
+.message-three {
+  width: 649px;
+  height: 45px;
+  left: 49%;
+  top: 601px;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   MESSAGE 4
+   ========================= */
+
+.message-four {
+  width: 649px;
+  height: 45px;
+  left: 49%;
+  top: 493px;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   MESSAGE 5
+   ========================= */
+
+.message-five {
+  width: 649px;
+  height: 45px;
+  left: 49%;
+  top: 420px;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   MESSAGE 6
+   ========================= */
+
+.message-six {
+  width: 649px;
+  height: 46px;
+  left: 49%;
+  top: 546px;
+  transform: translateX(-50%);
+}
+
+/* =========================
+   SKIP BUTTON
+   ========================= */
+
+.skip-button {
+  position: absolute;
+  right: 70px;
+  bottom: 200px;
+  border: none;
+  padding: 10px 20px;
+  background: transparent;
+  font-family: 'Retro Gaming';
+  font-size: 30px;
+  color: #416DB8;
+  cursor: pointer;
+}
+
+/* =========================
+   LET'S PLAY
+   ========================= */
+
+.lets-play {
+  position: absolute;
+  width: 649px;
+  height: 46px;
+  left: 49%;
+  top: 521px;
+  transform: translateX(-50%);
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-family: 'Retro Gaming';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 55px;
+  text-align: center;
+  color: #1C2165;
+  cursor: pointer;
+}
+
+/* =========================
+   COLLECTION AND HOW TO PLAY
+   ========================= */
+
+.collect-button {
+  position: absolute;
+  width: 159px;
+  height: 159px;
+  left: -390px;
+  top: 14px;
+  cursor: pointer;
+}
+
+.htp-button {
+  position: absolute;
+  width: 159px;
+  height: 159px;
+  left: -250px;
+  top: 14px;
+  cursor: pointer;
+}
+
+/* =========================
+   CAULDRON
+   ========================= */
+
+.couldron {
+  position: absolute;
+  width: 1060px;
+  height: 663px;
+  left: -165px;
+  top: 190px;
+  object-fit: contain;
+}
+
+/* =========================
+   CLUE WINDOW
+   ========================= */
+
+.clue-window {
+  position: absolute;
+  width: 918px;
+  height: 918px;
+  left: 576px;
+  top: 15px;
+}
+
+/* =========================
+   INGREDIENT WINDOW
+   ========================= */
+
+.ingredient-window {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  left: 575px;
+  top: 380px;
+}
+
+/* =========================
+   GAME TIMER
+   ========================= */
+
+.game-timer {
+  position: absolute;
+  width: 292px;
+  height: 110px;
+  left: 1400px;
+  top: 70px;
+  font-family: 'Retro Gaming';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 61px;
+  text-align: center;
+  color: #1C2165;
+}
+
+/* =========================
+   RULES WINDOW
+   ========================= */
+
+.rules-window {
+  position: absolute;
+  width: 1300px;
+  height: 1300px;
+  left: 130px;
+  top: -90px;
+  object-fit: contain;
+  z-index: 1000;
+}
+
+/* =========================
+   COLLECTION WINDOW
+   ========================= */
+
+.collection-window {
+  position: absolute;
+  width: 1400px;
+  height: 1400px;
+  left: -10px;
+  top: -250px;
+  object-fit: contain;
+  z-index: 1000;
+}
+
+/* =========================================================
+   CATEGORY BUTTONS
+   Keep these above the option window so they remain clickable.
+   ========================================================= */
+
+.geo-button {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 785px;
+  top: 312px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* =========================
+   WEATHER BUTTON
+   ========================= */
+
+.weather-button {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 935px;
+  top: 312px;
+  object-fit: contain;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* =========================
+   TIME BUTTON
+   ========================= */
+
+.time-button {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 1090px;
+  top: 312px;
+  object-fit: contain;
+  cursor: pointer;
+  z-index: 200;
+}
+
+/* =========================================================
+   CATEGORY OPTIONS WINDOW
+   Keep this below the category buttons.
+   ========================================================= */
+
+.geo-options-window {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  left: 1000px;
+  top: 100px;
+  z-index: 20;
+}
+
+.geo-window-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: contain;
+}
+
+/* =========================
+   CLOSE BUTTON
+   ========================= */
+
+.geo-close-button {
+  position: absolute;
+  width: 29px;
+  height: 30px;
+  left: 731px;
+  top: 210px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* =========================================================
+   GEO OPTION ICONS
+   ========================================================= */
+
+.geo-option {
+  position: absolute;
+  width: 138px;
+  height: 139px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  z-index: 2;
+}
+
+.geo-volcano {
+  left: 424px;
+  top: 287px;
+}
+
+.geo-cave {
+  left: 566px;
+  top: 287px;
+}
+
+.geo-mountain {
+  left: 424px;
+  top: 420px;
+}
+
+.geo-ocean {
+  left: 566px;
+  top: 424px;
+}
+
+.geo-forest {
+  left: 500px;
+  top: 550px;
+}
+
+.geo-option:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   INGREDIENT BALLS IN CAULDRON
+   ========================================================= */
+
+.dropped-geo {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  pointer-events: auto;
+  cursor: pointer;
+  transform-origin: center bottom;
+  animation: geo-drop 0.7s cubic-bezier(0.25, 0.8, 0.35, 1) both;
+}
+
+@keyframes geo-drop {
+  0% {
+    transform: translate(var(--start-x), -220px)
+      rotate(-35deg) scale(0.8);
+    opacity: 0;
+  }
+
+  55% {
+    transform: translate(0, 8px)
+      rotate(calc(var(--final-rotation) + 15deg)) scale(0.9);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translate(0, -5px)
+      rotate(calc(var(--final-rotation) - 8deg)) scale(0.85);
+  }
+
+  100% {
+    transform: translate(0, 0)
+      rotate(var(--final-rotation)) scale(0.85);
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   INGREDIENT NAMES WINDOW
+   ========================================================= */
+
+img.ingredient-list-window {
+  position: absolute;
+  width: 400px;
+  height: auto;
+  left: -415px;
+  top: 250px;
+  max-width: none;
+  transform: none;
+  z-index: 30;
+}
+
+/* =========================
+   INGREDIENT BULLET LIST
+   ========================= */
+
+.ingredient-list {
+  position: absolute;
+  left: -365px;
+  top: 470px;
+  width: 300px;
+  max-height: 350px;
+  overflow: hidden;
+  z-index: 31;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #1C2165;
+  pointer-events: none;
+}
+
+.ingredient-list ul {
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ingredient-list li {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 0 8px 0 !important;
+}
+
+.ingredient-list li::marker {
+  content: "" !important;
+}
+
+.ingredient-list li::before {
+  content: none !important;
+}
+
+/* =========================
+   CAULDRON FRONT ANIMATION
+   ========================= */
+
+.couldron-front {
+  position: absolute;
+  width: 1060px;
+  height: 663px;
+  left: -165px;
+  top: 190px;
+  object-fit: contain;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* =========================================================
+   WEATHER AND TIME OPTION ICONS
+   ========================================================= */
+
+.weather-option,
+.time-option {
+  position: absolute;
+  width: 138px;
+  height: 139px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+  z-index: 2;
+}
+
+.weather-option:hover,
+.time-option:hover {
+  transform: scale(1.05);
+}
+
+/* FIRST POSITION: TOP LEFT */
+.option-position-1 {
+  left: 424px;
+  top: 287px;
+}
+
+/* SECOND POSITION: TOP RIGHT */
+.option-position-2 {
+  left: 566px;
+  top: 287px;
+}
+
+/* THIRD POSITION: MIDDLE LEFT */
+.option-position-3 {
+  left: 424px;
+  top: 420px;
+}
+
+/* FOURTH POSITION: MIDDLE RIGHT */
+.option-position-4 {
+  left: 566px;
+  top: 424px;
+}
+
+/* FIFTH POSITION: BOTTOM CENTRE */
+.option-position-5 {
+  left: 500px;
+  top: 550px;
+}
+
+/* =========================================================
+   CLUE TEXT AND INGREDIENT REQUIREMENT
+   ========================================================= */
+
+.clue-text {
+  position: absolute;
+  left: 785px;
+  top: 647px;
+  width: 455px;
+  max-height: none;
+  height: auto;
+  overflow: visible;
+  z-index: 16;
+  padding: 12px 18px;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: break-word;
+  color: #416DB8;
+  pointer-events: none;
+}
+
+.clue-requirement {
+  margin-bottom: 12px;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+  color: #1C2165;
+}
+
+.clue-content {
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.clue-line {
+  margin-bottom: 4px;
+}
+
+/* =========================================================
+   FORWARD / MIX BUTTON
+   ========================================================= */
+
+.mix-button {
+  position: absolute;
+  left: 300px;
+  top: 150px;
+  width: 115px;
+  height: 115px;
+  z-index: 35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mix-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.15s ease;
+}
+
+.mix-button:hover:not(:disabled) img {
+  transform: scale(1.06);
+}
+
+.mix-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   SEPARATE CREATURE RESULT SCREEN
+   ========================================================= */
+
+.result-screen {
+  z-index: 50;
+}
+
+.result-window {
+  position: absolute;
+  width: 1500px;
+  height: 1500px;
+  left: 30px;
+  top: -118px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.result-creature {
+  position: absolute;
+  left: 80px;
+  top: 230px;
+  width: 850px;
+  height: 850px;
+  object-fit: contain;
+  z-index: 3;
+}
+
+.result-back-button {
+  position: absolute;
+  left: 1180px;
+  top: 450px;
+  width: 150px;
+  height: 150px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.result-back-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.result-back-button:hover {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   ONION SCREEN ONLY: BACK BUTTON
+   ========================================================= */
+
+/* POSITION OF THE ONION BACK BUTTON: change left / top to move it */
+.onion-back-button {
+  left: 50px;
+  top: 450px;
+}
+
+/* ROTATION OF THE ONION BACK BUTTON: change the number in rotate(...)
+   90deg  = rotated vertically (current)
+   -90deg = rotated the other way
+   180deg = turned around
+   scaleX(-1) = mirror left/right    scaleY(-1) = mirror up/down */
+.onion-back-button img {
+  transform: rotate(180deg);
+}
+
+/* ONION RESULT IMAGE SIZE */
+.result-onion {
+  width: 500px;
+  height: 500px;
+  left: 210px;
+  top: 340px;
+  object-fit: contain;
+}
+
+/* =========================================================
+   RESULT SCREEN NAME AND MESSAGE
+   ========================================================= */
+
+.result-message {
+  position: absolute;
+  width: 700px;
+  left: 505px;
+  top: 505px;
+  z-index: 5;
+  font-family: 'Retro Gaming', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #1C2165;
+  pointer-events: none;
+}
+
+.result-title {
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 40px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  overflow-wrap: break-word;
+}
+
+.result-subtitle {
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* CREATURE FOUND MESSAGE */
+.creature-result-message {
+  color: #1C2165;
+}
+
+/* ONION RESULT MESSAGE */
+.onion-result-message {
+  position: absolute;
+  width: 700px;
+  left: 510px;
+  top: 510px;
+  z-index: 5;
+  font-family: 'Retro Gaming', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #1C2165;
+}
+
+/* =========================================================
+   GAME OVER SCREEN
+   ========================================================= */
+
+.game-over-screen {
+  z-index: 100;
+}
+
+.game-over-message {
+  position: absolute;
+  width: 800px;
+  left: 290px;
+  top: 460px;
+  z-index: 5;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 50px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  color: #1C2165;
+}
+
+
+/* =========================================================
+   CREATURE 5 CLUE FONT
+   ========================================================= */
+
+.clue-text-creature-5 .clue-content {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.clue-text-creature-5 .clue-line {
+  margin-bottom: 2px;
+}
+
+/* =========================================================
+   CREATURE 5 RESULT SCREEN
+   ========================================================= */
+
+/* Move only Crystallea to the left to make room for the text. */
+.result-creature-five {
+  left: 120px;
+  top: 235px;
+  width: 780px;
+  height: 780px;
+  object-fit: contain;
+}
+
+/* Place Crystallea's result message on the right. */
+.creature-five-result-message {
+  left: 630px;
+  top: 530px;
+  width: 500px;
+  text-align: center;
+}
+
+/* =========================================================
+   GAME OVER VIDEO
+   ========================================================= */
+
+.game-over-video-screen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+  z-index: 200;
+}
+
+.game-over-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* =========================================================
+   PLAY AGAIN BUTTON
+   ========================================================= */
+
+.play-again-button {
+  position: absolute;
+  width: 800px;
+  left: 300px;
+  top: 550px;
+  z-index: 6;
+
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  color: #1C2165;
+
+  cursor: pointer;
+}
+
+/* Subtle hover feedback without changing the existing screen layout */
+.play-again-button:hover {
+  color: #416DB8;
+}
+
+
+/* =========================================================
+   COLLECTION CONTAINER
+   ========================================================= */
+
+.collection-creatures {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1440px;
+  height: 1024px;
+  overflow: visible;
+  z-index: 1001;
+  pointer-events: none;
+  font-family: 'Retro Gaming', sans-serif;
+}
+
+/* =========================================================
+   DEFAULT CREATURE CARD
+   ========================================================= */
+
+.collection-creature-card {
+  position: absolute;
+  width: 374px;
+  height: 374px;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================================
+   CREATURE IMAGE
+   ========================================================= */
+
+.collection-creature-image {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  object-fit: contain;
+}
+/* =========================================================
+   RECIPE BUTTON (CLICK TO REVEAL RECIPE)
+   ========================================================= */
+
+.collection-creature-recipe {
+  position: absolute;
+  left: 50%;
+  top: 236px;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 420px;
+  margin: 0;
+  padding: 6px 10px;
+  border: none;
+  background: transparent;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 1000;
+}
+
+.collection-creature-recipe:hover {
+  opacity: 0.75;
+}
+/* =========================================================
+   CREATURE 1 — LYNX
+   ========================================================= */
+
+.collection-crea1 {
+  left: 205px;
+  top: 320px;
+  width: 374px;
+  height: 374px;
+}
+
+.collection-crea1 .collection-creature-recipe {
+  top: 236px;
+  color: #416DB8;
+}
+
+/* =========================================================
+   CREATURE 2 — PETALUME
+   ========================================================= */
+
+.collection-crea2 {
+  left: 515px;
+  top: 322px;
+  width: 374px;
+  height: 374px;
+}
+
+.collection-crea2 .collection-creature-recipe {
+  top: 236px;
+  color: #0F5153;
+}
+
+/* =========================================================
+   CREATURE 3 — MAGVOL
+   ========================================================= */
+
+.collection-crea3 {
+  left: 820px;
+  top: 323px;
+  width: 374px;
+  height: 374px;
+}
+
+.collection-crea3 .collection-creature-recipe {
+  top: 234px;
+  color: #604646;
+}
+
+/* =========================================================
+   CREATURE 4 — WISPER
+   ========================================================= */
+
+.collection-crea4 {
+  left: 360px;
+  top: 535px;
+  width: 374px;
+  height: 374px;
+}
+
+.collection-crea4 .collection-creature-recipe {
+  top: 235px;
+  color: #5E3EAB;
+}
+
+/* =========================================================
+   CREATURE 5 — CRYSTALLEA
+   ========================================================= */
+
+.collection-crea5 {
+  left: 665px;
+  top: 515px;
+  width: 374px;
+  height: 374px;
+}
+
+.collection-crea5 .collection-creature-recipe {
+  top: 262px;
+  color: #BF3FB9;
+}
+
+/* =========================================================
+   WIN FLOW (NEW)
+   ========================================================= */
+
+/* MIZI LOGO ON THE WIN SCREENS (FIGMA POSITION) */
+.finish-mizi {
+  position: absolute;
+  width: 159px;
+  height: 159px;
+  left: 1247px;
+  top: 32px;
+  z-index: 50;
+}
+
+/* =========================
+   "YOU RESCUED ALL OF THEM" TYPEWRITER MESSAGE
+   ========================= */
+
+.win-message {
+  position: absolute;
+  width: 1200px;
+  left: 120px;
+  top: 449px;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 35px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  color: #1C2165;
+}
+
+/* =========================
+   NICKNAME AND TOP 3 SCREEN: WINDOWS
+   ========================= */
+
+/* RIGHT WINDOW (TOP 3) */
+.finish-top3-window {
+  position: absolute;
+  width: 1047px;
+  height: 1047px;
+  left: 344px;
+  top: 45px;
+  z-index: 1;
+}
+
+/* LEFT WINDOW (NICKNAME) */
+.finish-nickname-window {
+  position: absolute;
+  width: 918px;
+  height: 918px;
+  left: -50px;
+  top: 174px;
+  z-index: 2;
+}
+
+/* =========================
+   NICKNAME AND TOP 3 SCREEN: TEXT
+   ========================= */
+
+.finish-label {
+  position: absolute;
+  z-index: 4;
+  font-family: 'Retro Gaming', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 29px;
+  text-align: center;
+  color: #1C2165;
+  pointer-events: none;
+}
+
+/* "enter nickname:" */
+.finish-nickname-label {
+  width: 405px;
+  height: 57px;
+  left: 100px;
+  top: 480px;
+}
+
+/* "choose top 3 wardens:" */
+.finish-top3-label {
+  width: 444px;
+  height: 63px;
+  left: 710px;
+  top: 380px;
+}
+
+/* NICKNAME INPUT (BELOW THE LABEL) */
+.finish-nickname-input {
+  position: absolute;
+  z-index: 4;
+  width: 405px;
+  height: 50px;
+  left: 190px;
+  top: 525px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 3px solid #416DB8;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  font-family: 'Retro Gaming', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 29px;
+  text-align: center;
+  color: #1C2165;
+}
+
+/* =========================
+   NICKNAME AND TOP 3 SCREEN: FORWARD BUTTON
+   ========================= */
+
+.finish-forward-button {
+  position: absolute;
+  left: 1150px;
+  top: 455px;
+  width: 123px;
+  height: 123px;
+  z-index: 5;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.finish-forward-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.15s ease;
+}
+
+.finish-forward-button:hover img {
+  transform: scale(1.06);
+}
+
+/* =========================
+   TOP 3 CREATURES
+   ========================= */
+
+/* Wrapper: holds the artwork. It does not catch clicks itself. */
+.top3-creature {
+  position: absolute;
+  z-index: 4;
+  pointer-events: none;
+  transition: transform 0.15s ease;
+}
+
+.top3-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.top3-hit {
+  position: absolute;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.top3-creature:hover {
+  transform: scale(1.06);
+}
+
+/* SELECTED: GENTLE HOVERING ANIMATION */
+.top3-creature.selected {
+  animation: top3-float 1.1s ease-in-out infinite;
+}
+
+@keyframes top3-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1.06);
+  }
+
+  50% {
+    transform: translateY(-14px) scale(1.06);
+  }
+}
+
+/* ARTWORK POSITIONS (unchanged) */
+.top3-crea1 {
+  left: 660px;
+  top: 385px;
+  width: 350px;
+  height: 250px;
+}
+
+.top3-crea2 {
+  left: 850px;
+  top: 385px;
+  width: 350px;
+  height: 250px;
+}
+
+.top3-crea3 {
+  left: 850px;
+  top: 590px;
+  width: 350px;
+  height: 250px;
+}
+
+.top3-crea4 {
+  left: 660px;
+  top: 590px;
+  width: 350px;
+  height: 250px;
+}
+
+.top3-crea5 {
+  left: 755px;
+  top: 480px;
+  width: 350px;
+  height: 250px;
+}
+
+/* CLICKABLE AREAS (relative to each creature's own box) */
+.top3-crea1 .top3-hit {
+  left: 20px;
+  top: 10px;
+  width: 195px;
+  height: 217px;
+}
+
+.top3-crea2 .top3-hit {
+  left: 135px;
+  top: 10px;
+  width: 205px;
+  height: 217px;
+}
+
+.top3-crea3 .top3-hit {
+  left: 135px;
+  top: 22px;
+  width: 205px;
+  height: 218px;
+}
+
+.top3-crea4 .top3-hit {
+  left: 20px;
+  top: 22px;
+  width: 195px;
+  height: 218px;
+}
+
+.top3-crea5 .top3-hit {
+  left: 125px;
+  top: 60px;
+  width: 100px;
+  height: 140px;
+}
+
+/* =========================
+   RESCUE ID CARD SCREEN
+   ========================= */
+
+.rescue-card-image {
+  position: absolute;
+  width: 1147px;
+  height: 1147px;
+  left: 146px;
+  top: -93px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+/* THE THREE BOXES ON THE CARD (CENTRED ON EACH BOX) */
+.card-slot {
+  position: absolute;
+  width: 160px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.card-slot-1 {
+  left: 751px;
+  top: 523px;
+}
+
+.card-slot-2 {
+  left: 900px;
+  top: 523px;
+}
+
+.card-slot-3 {
+  left: 1049px;
+  top: 523px;
+}
+
+.card-creature {
+  display: block;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.card-creature-crea1 {
+  width: 300px;
+  height: 291px;
+}
+
+.card-creature-crea2 {
+  width: 300px;
+  height: 291px;
+}
+
+.card-creature-crea3 {
+  width: 300px;
+  height: 291px;
+}
+
+.card-creature-crea4 {
+  width: 300px;
+  height: 291px;
+}
+
+.card-creature-crea5 {
+  width: 300px;
+  height: 291px;
+}
+
+/* PLAYER NAME ON THE CARD */
+.rescue-player-name {
+  position: absolute;
+  width: 400px;
+  left: 405px;
+  top: 517px;
+  z-index: 3;
+  font-family: 'Retro Gaming', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 29px;
+  text-align: center;
+  white-space: nowrap;
+  color: #1C2165;
+}
+
+/* NUMBER OF CREATURES RESCUED (WHITE TEXT ON THE CARD) */
+.rescue-count {
+  position: absolute;
+  width: 193px;
+  left: 625px;
+  top: 759px;
+  z-index: 3;
+  font-family: 'Retro Gaming', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 29px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/* =========================
+   RESCUE ID NUMBER 
+   ========================= */
+
+.rescue-id-number {
+  position: absolute;
+  width: 193px;
+  left: 532px;
+  top: 623px;
+  z-index: 3;
+  font-family: 'Retro Gaming', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  text-align: center;
+  white-space: nowrap;
+  color: #1C2165;
+}
+
+/* =========================
+   DOWNLOAD BUTTON
+   ========================= */
+
+.rescue-download-button {
+  position: absolute;
+  width: 400px;
+  left: 500px;
+  top: 138px;
+  z-index: 6;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  color: #1C2165;
+  cursor: pointer;
+}
+
+.rescue-download-button:hover {
+  color: #416DB8;
+}
+
+/* =========================================================
+   CONGRATS VIDEO (WHITE BACKGROUND)
+   ========================================================= */
+
+.game-over-video-screen.congrats-video-screen {
+  background: #FFFFFF;
+}
+
+/* =========================================================
+   CLOSE BUTTONS: COLLECTION AND HOW TO PLAY WINDOWS (NEW)
+   ========================================================= */
+
+/* Sits on the red square of win_char.PNG (collection window) */
+.collection-close-button {
+  position: absolute;
+  width: 41px;
+  height: 40px;
+  left: 1155px;
+  top: 233px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+/* Sits on the red square of rules.PNG (how to play window) */
+.rules-close-button {
+  position: absolute;
+  width: 39px;
+  height: 38px;
+  left: 1079px;
+  top: 260px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+/* =========================================================
+   MIZI LOGO LINK + "VISIT US" BUBBLE (NEW)
+   ========================================================= */
+
+/* The logo image fills the existing .mizi / .finish-mizi box,
+   so its position and size stay exactly as before. */
+.mizi-logo-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* The bubble is hidden until the logo is hovered.
+   TENTATIVE POSITION: just under the logo, right-aligned with it.
+   Adjust top / right / width to move or resize it. */
+.visit-bubble {
+  
+  position: absolute;
+  top: calc(92% + 80px);
+  right: -40px;
+  width: 220px;
+  z-index: 60;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  cursor: pointer;
+  
+}
+
+.visit-bubble img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.15s ease;
+}
+
+.visit-bubble:hover img {
+  transform: scale(1.05);
+}
+
+/* Show the bubble while the logo or the bubble itself is hovered */
+.mizi-link:hover .visit-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   TOOLTIPS
+   ========================================================= */
+
+.game-tooltip {
+  position: fixed;
+  z-index: 5000;
+  padding: 6px 12px;
+  background: #FFFAF5;
+  border: 1px solid #1C2165;
+  font-family: 'Retro Gaming', sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #1C2165;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* =========================================================
+   ABOUT BUTTON + ABOUT WINDOW (NEW)
+   ========================================================= */
+
+.about-bubble {
+  position: absolute;
+  top: 92%;
+  right: -40px;
+  width: 220px;
+  z-index: 60;
+  margin: 0;
+  padding: 0;
+  border: none;
+  opacity: 0;
+  visibility: hidden;
+  background: transparent;
+  transform: translateY(-6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  cursor: pointer;
+}
+
+.about-bubble img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.15s ease;
+}
+
+.about-bubble:hover img {
+  transform: scale(1.05);
+}
+
+/* Show the about button together with the "visit us" bubble */
+.mizi-link:hover .about-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Invisible strip under the logo, only present while it is hovered.
+   It keeps both buttons showing while the cursor moves down from the logo
+   to the about button, even if there is a small gap between them. */
+.mizi-link:hover::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: -40px;
+  width: 220px;
+  height: 200px;
+}
+
+/* Layer that holds the About window above every screen.
+   It lets clicks pass through everywhere except the window and its button. */
+.about-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3000;
+  pointer-events: none;
+}
+
+/* TENTATIVE SIZE AND POSITION: centred in the game area.
+   Adjust width / height / left / top to match about_win.PNG. */
+.about-window {
+  position: absolute;
+  width: 1100px;
+  height: 1100px;
+  left: 160px;
+  top: -20px;
+  object-fit: contain;
+  pointer-events: auto;
+}
+
+/* Sits on the red close square of about_win.PNG.
+   TENTATIVE POSITION: adjust left / top / width / height to fit. */
+.about-close-button {
+  position: absolute;
+  width: 39px;
+  height: 38px;
+  left: 1087px;
+  top: 257px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 1;
+}
