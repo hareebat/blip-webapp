@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
-import introVideo from './assets/intro.mp4'
+import introVideo from './assets/intro.MP4'
 import gameOverVideo from './assets/game_over.MP4'
-import congratsVideo from './assets/congrats.mp4'
+import congratsVideo from './assets/congrats.MP4'
 import bgImage from './assets/bg.PNG'
-import windowImage from './assets/win1.png'
+import windowImage from './assets/win1.PNG'
 import win2 from './assets/win2.PNG'
-import deviceVideo from './assets/device.mp4'
-import devMessage from './assets/dev message.png'
+import deviceVideo from './assets/device.MP4'
+import devMessage from './assets/dev message.PNG'
 import miziImage from './assets/mizi.PNG'
 import visitImage from './assets/visit.PNG'
 import aboutImage from './assets/about.PNG'
@@ -1175,7 +1175,7 @@ function App() {
         const url = URL.createObjectURL(blob)
         const link = document.createElement('a')
         link.href = url
-        link.download = `rescue-id-${rescueIdNumber}.png`
+        link.download = `rescue-id-${rescueIdNumber}.PNG`
         document.body.appendChild(link)
         link.click()
         link.remove()
