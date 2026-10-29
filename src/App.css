@@ -72,8 +72,35 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
+  transform: translate(-50%, -50%);
   transform-origin: center center;
   flex-shrink: 0;
+}
+
+/* =========================================================
+   DYNAMIC SCREEN AUTO-SCALING MATRIX
+   Scales down the rigid 1440x1024 frame to fit any smaller laptop window
+   ========================================================= */
+
+/* 1. If the user's screen is narrower than 1440px */
+@media (max-width: 1440px) {
+  .design-frame {
+    transform: translate(-50%, -50%) scale(calc(100vw / 1440));
+  }
+}
+
+/* 2. If the user's screen is shorter than 1024px */
+@media (max-height: 1024px) {
+  .design-frame {
+    transform: translate(-50%, -50%) scale(calc(100vh / 1024));
+  }
+}
+
+/* 3. Safety Catch: Scale by whichever constraint is tighter */
+@media (max-width: 1440px) and (max-height: 1024px) {
+  .design-frame {
+    transform: translate(-50%, -50%) scale(min(calc(100vw / 1440), calc(100vh / 1024)));
+  }
 }
 
 /* =========================
